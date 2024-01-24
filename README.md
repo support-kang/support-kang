@@ -6,7 +6,7 @@
 
 ## 💻 기술 스택
 - **프론트엔드**: HTML, CSS, JavaScript, React, Next.js, React Native, Unity
-- **백엔드**: Node.js, Express
+- **백엔드**: Node.js, Django
 - **데이터베이스**: MongoDB, SQL
 - **도구들**: Git, GitHub
 
