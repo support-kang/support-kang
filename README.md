@@ -18,3 +18,4 @@
 ## 📫 연락 방법
 - 이메일: jiwon.kang.dev@gmail.com
 - GitHub: https://github.com/support-kang/
+- LinkedIn: https://www.linkedin.com/in/jiwon-kang-1a04822b0/
