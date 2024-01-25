@@ -22,4 +22,6 @@
 <br/>
 <br/>
 
-[![Solved.ac Profile](http://mazassumnida.wtf/api/generate_badge?boj=kk3012001)](https://solved.ac/kk3012001)<br/>
+<p align="center">
+    <img src="https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=kk3012001" width="100%"/>
+</p>
