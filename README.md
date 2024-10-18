@@ -2,7 +2,6 @@
 
 ## 👋 소개
 - 국민대학교 컴퓨터 공학 부전공 주니어 개발자
-- 프론트엔드와 백엔드 안가리고 배우고싶어요!!
 
 ## 💻 기술 스택
 - **프론트엔드**: HTML, CSS, JavaScript, React, Next.js, React Native, Unity
