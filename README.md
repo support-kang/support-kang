@@ -4,10 +4,9 @@
 - 국민대학교 컴퓨터 공학 부전공 주니어 개발자
 
 ## 💻 기술 스택
-- **프론트엔드**: HTML, CSS, JavaScript, React, Next.js, React Native, Unity
+- **프론트엔드**: React, React Native, TypeScript, Unity
 - **백엔드**: Node.js, Django
-- **데이터베이스**: MongoDB, SQL
-- **도구들**: Git, GitHub
+- **도구들**: Git, GitHub, Notion
 
 ## 🌱 현재 학습 중
 - React의 고급 개념들
