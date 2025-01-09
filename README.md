@@ -7,15 +7,11 @@
 - **프론트엔드**: React, React Native, TypeScript, Unity
 - **백엔드**: Node.js, Django
 - **도구들**: Git, GitHub, Notion
-
-## 🌱 현재 학습 중
-- React의 고급 개념들
-- AWS
+- **로우 코드**: Mendix Rapid Developer
 
 ## 📫 연락 방법
 - 이메일: jiwon.kang.dev@gmail.com
 - GitHub: https://github.com/support-kang/
-- LinkedIn: https://www.linkedin.com/in/jiwon-kang-1a04822b0/
 <br/>
 <br/>
 
