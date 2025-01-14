@@ -5,8 +5,7 @@
 - 국민대학교 컴퓨터 공학 부전공
 
 ## 💻 기술 스택
-- **프론트엔드**: React, React Native, TypeScript, Unity
-- **백엔드**: Node.js, Django
+- **프론트엔드**: React, React Native, TypeScript
 - **도구들**: Git, GitHub, Notion
 - **로우 코드**: Mendix Rapid Developer
 
