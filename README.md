@@ -1,6 +1,7 @@
 # 안녕하세요, 강지원입니다!
 
 현재 엔터프라이즈 시스템 통합 및 백오피스 개발을 담당하고 있습니다.
+Codex - SDD 지향 개발
 
 ## 👋 소개
 
@@ -14,9 +15,9 @@
 ## 💻 기술 스택
 
 - **프론트엔드**: React, React Native, TypeScript
-- **백엔드**: Spring Boot (공부 중)
+- **백엔드**: Spring Boot (학습 중), Java
 - **도구들**: Git, GitHub, Notion
-- **로우 코드**: Mendix Rapid Developer
+- **로우 코드**: Mendix Advanced Developer
 
 ## 📫 연락 방법
 
