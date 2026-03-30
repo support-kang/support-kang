@@ -1,9 +1,11 @@
+const EXPDATE = new Date(new Date() - new Date('2023-09-01'));
+
 export const heroContent = {
   eyebrow: 'Frontend Developer Portfolio',
   name: '강지원',
-  title: 'React를 중심으로 화면을 만들고, 필요한 영역은 직접 연결해 온 3년차 개발자입니다.',
+  title: 'React / Java를 중심으로 화면을 만들고, 필요한 영역은 직접 연결해 온 3년차 개발자입니다.',
   lead:
-    '프론트엔드 개발을 중심으로 Mendix 기반 로우코드 개발, React Native 앱 개발, 기업용 시스템 PoC 개발을 함께 경험했습니다. 화면 구현에 그치지 않고 실제 사용자 흐름이 끊기지 않도록 상태 관리, 데이터 구조, API 연동, 배포 환경까지 함께 고민합니다.',
+    'React, Java-Mendix 기반 개발, React Native 앱 개발, 기업용 시스템 개발을 함께 경험했습니다. 화면 구현에 그치지 않고 실제 사용자 흐름이 끊기지 않도록 상태 관리, 데이터 구조, API 연동, 배포 환경까지 함께 고민합니다.',
   primaryAction: {
     href: '#project-favorfit',
     label: '대표 프로젝트 보기',
@@ -13,8 +15,8 @@ export const heroContent = {
     label: '이력서 열기',
   },
   summaryItems: [
-    '실무 경력 2년 9개월',
-    '주요 기술: React, TypeScript, Mendix, React Native',
+    EXPDATE.getFullYear() - 1970 + '년 ' + (EXPDATE.getMonth() + 1) + '개월차 개발자',
+    '주요 기술: React, TypeScript, Java, Mendix, React Native',
     '국민대학교 건설시스템공학 학사, 소프트웨어학 부전공',
   ],
 };

@@ -158,6 +158,7 @@ img {
 
 .summary-list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 10px 22px;
   margin: 28px 0 0;
