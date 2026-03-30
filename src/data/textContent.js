@@ -1,7 +1,7 @@
 const EXPDATE = new Date(new Date() - new Date('2023-09-01'));
 
 export const heroContent = {
-  eyebrow: 'Frontend Developer Portfolio',
+  eyebrow: 'Developer Portfolio',
   name: '강지원',
   title: 'React / Java를 중심으로 화면을 만들고, 필요한 영역은 직접 연결해 온 3년차 개발자입니다.',
   lead:
