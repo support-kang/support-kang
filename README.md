@@ -1,7 +1,6 @@
 # 안녕하세요, 강지원입니다!
 
 현재 엔터프라이즈 시스템 통합 및 백오피스 개발을 담당하고 있습니다.
-Codex - SDD 지향 개발
 
 ## 👋 소개
 
@@ -26,7 +25,3 @@ Codex - SDD 지향 개발
 
 <br/>
 <br/>
-
-<p align="center">
-  <img src="https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=kk3012001" width="100%"/>
-</p>
