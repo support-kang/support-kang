@@ -18,6 +18,10 @@ export function IdentificationBlock({ content }) {
           <dt>Revision</dt>
           <dd className="mono">{content.revision}</dd>
         </div>
+        <div>
+          <dt>Status</dt>
+          <dd className="mono status-accent">{content.status}</dd>
+        </div>
       </dl>
       <p className="identity-summary">{content.summary}</p>
     </section>

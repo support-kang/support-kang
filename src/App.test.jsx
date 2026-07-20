@@ -12,8 +12,7 @@ describe('App', () => {
     expect(screen.getByText('ENTERPRISE APPLICATION DEVELOPER')).toBeInTheDocument();
     const identity = document.getElementById('identification');
     expect(within(identity).getByText('2026.07')).toBeInTheDocument();
-    expect(within(identity).queryByText('OPERATIONAL')).not.toBeInTheDocument();
-    expect(within(identity).queryByText('Status')).not.toBeInTheDocument();
+    expect(within(identity).getByText('OPERATIONAL')).toBeInTheDocument();
 
     for (const label of [
       'Identification',
