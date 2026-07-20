@@ -12,7 +12,6 @@ export const identification = {
   focusLine: 'React · Mendix · Salesforce · Integration',
   location: 'Seoul, Republic of Korea',
   revision: '2026.07',
-  status: 'OPERATIONAL',
   summary:
     '기업 업무 시스템을 구조화하고, 화면·데이터 흐름·연계 인터페이스까지 운영 가능한 형태로 구현하는 개발자.',
 };

@@ -165,7 +165,7 @@ export const projectRecords = [
     stack: 'React, React Native, TypeScript, Fabric.js, AWS',
     scope: '담당 기능 구현 보조, 간단한 리팩터링, PoC 화면 지원',
     team: '스콥 / 인턴',
-    status: 'INTERNAL',
+    status: 'EXTERNAL',
     company: '스콥',
     problem:
       '배정된 화면·기능 일부 구현과 기존 코드 정리 필요.',
