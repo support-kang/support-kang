@@ -172,7 +172,7 @@ export const projectRecords = [
     decision:
       '담당 범위 안에서 React 화면 구현과 작은 단위 리팩터링을 우선했다.',
     outcome:
-      'Favorfit 일부 기능 지원과 GetMedi PoC 화면 지원 정도를 수행했다.',
+      'Favorfit 일부 기능 지원과 GetMedi PoC 화면 지원을 수행했다.',
   },
 ];
 
