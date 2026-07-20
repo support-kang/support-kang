@@ -8,11 +8,15 @@ export function EngineeringNotes({ notes, experience, copy }) {
         <h2 id="engineering-notes-title">{copy.title}</h2>
         <p className="section-lede">{copy.body}</p>
       </header>
-      <div className="notes-grid">
-        <div className="body-copy">
-          {notes.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
+
+      <div className="notes-intro body-copy">
+        {notes.paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+
+      <div className="notes-split">
+        <div className="notes-employment">
           <p className="meta-key">Employment</p>
           <ul className="employment-list">
             {experience.map((item) => (
@@ -27,6 +31,7 @@ export function EngineeringNotes({ notes, experience, copy }) {
             ))}
           </ul>
         </div>
+
         <aside className="notes-aside">
           <p className="meta-key">Education</p>
           <p>{notes.education}</p>

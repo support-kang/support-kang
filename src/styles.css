@@ -381,12 +381,24 @@ p {
   font-size: 0.9rem;
 }
 
-.notes-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 32px;
+.notes-intro {
+  max-width: 72ch;
   padding-top: 8px;
   border-top: 1px solid var(--line);
+}
+
+.notes-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 32px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.notes-employment {
+  display: grid;
+  align-content: start;
 }
 
 .notes-aside {
@@ -478,7 +490,7 @@ p {
   .identity-meta,
   .project-record,
   .range-grid,
-  .notes-grid {
+  .notes-split {
     grid-template-columns: 1fr;
   }
 
