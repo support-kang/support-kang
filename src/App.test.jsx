@@ -63,10 +63,10 @@ describe('App', () => {
     expect(within(first).getByText('PRJ-01')).toBeInTheDocument();
     expect(within(first).getByRole('heading', { name: /Salesforce/i })).toBeInTheDocument();
     expect(within(first).getByText('Key capabilities')).toBeInTheDocument();
-    expect(within(first).getByText('가격·특가 결재 → SAP 조건 연동')).toBeInTheDocument();
-    expect(within(first).getByText('오더 수량·저장위치·배치 통합 수정')).toBeInTheDocument();
-    expect(within(first).getByText('출하 예약 3채널 원자적 SAP 송신')).toBeInTheDocument();
-    expect(within(first).getByText('할당 수량 실시간 조회·제로섬 조정')).toBeInTheDocument();
+    expect(within(first).getByText('가격·특가 승인 및 SAP 가격 조건 연동')).toBeInTheDocument();
+    expect(within(first).getByText('주문 수량·저장 위치·배치 정보 통합 변경')).toBeInTheDocument();
+    expect(within(first).getByText('출하 예약 검증 및 SAP 연동')).toBeInTheDocument();
+    expect(within(first).getByText('할당 수량 실시간 조회 및 재배분')).toBeInTheDocument();
     expect(screen.getAllByText('Problem').length).toBe(9);
     expect(screen.getAllByText('Technical decision').length).toBe(9);
     expect(screen.getAllByText('Outcome').length).toBe(9);
