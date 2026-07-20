@@ -7,7 +7,7 @@ export const projectRecords = [
     stack: 'Salesforce, Apex, LWC, JavaScript, SOQL, SAP REST API, Queueable Apex',
     scope: '주문·가격·출하·할당 Hub 및 SAP 비동기 인터페이스 연동',
     team: '에스비티글로벌 / 담당',
-    status: 'OPERATIONAL',
+    status: 'EXTERNAL',
     company: '에스비티글로벌',
     problem:
       '주문·가격·출하·할당 업무가 화면과 SAP 사이에 분산되어, 승인된 변경만 운영 시스템으로 안전하게 반영되어야 했다.',
@@ -63,7 +63,7 @@ export const projectRecords = [
     stack: 'Low-Code Platform, React, Amazon Bedrock, Siemens ALM·PLM',
     scope: 'MVP 기획, 데이터 모델 설계, ALM/PLM 연동, AI 챗봇 연동',
     team: '풀스택 2인 중 1인',
-    status: 'CONFIDENTIAL',
+    status: 'EXTERNAL',
     company: '에스비티글로벌',
     problem:
       '짧은 일정 안에 Siemens ALM·PLM 연동과 핵심 요구사항을 검증할 MVP가 필요했다.',
@@ -80,7 +80,7 @@ export const projectRecords = [
     stack: 'Low-Code Platform, React, SpreadJS, External Database, Batch',
     scope: 'PoC 범위 수립, 검증 로직, 대용량 조회 화면, 위젯, 고객 교육',
     team: '1인',
-    status: 'CONFIDENTIAL',
+    status: 'EXTERNAL',
     company: '에스비티글로벌',
     problem:
       '기존 업무 시스템 위에서 SCM과 Scope 3 탄소배출량 검증을 짧은 PoC로 검증해야 했다.',
@@ -97,7 +97,7 @@ export const projectRecords = [
     stack: 'Java, React, TypeScript, ECharts, AG Grid, SFTP, SMTP',
     scope: '해석 데이터 자동화, 시각화, 파일 전송, 시스템 메일, Low-Code 위젯 통합',
     team: '풀스택 3인 중 1인',
-    status: 'CONFIDENTIAL',
+    status: 'EXTERNAL',
     company: '에스비티글로벌',
     problem:
       '열해석 데이터 관리·분석이 수작업에 가깝고, 대용량 결과를 화면에서 다루기 어려웠다.',
@@ -114,7 +114,7 @@ export const projectRecords = [
     stack: 'Low-Code Platform, React',
     scope: '통합 관리 앱 기획, 데이터 모델 설계, Gantt Chart 컴포넌트',
     team: '1인',
-    status: 'CONFIDENTIAL',
+    status: 'EXTERNAL',
     company: '에스비티글로벌',
     problem:
       '제품개발 현황을 한곳에서 점검할 수 있는 통합 관리 형태가 필요했다.',
@@ -148,7 +148,7 @@ export const projectRecords = [
     stack: 'React Native, TypeScript, Recoil, AWS Cognito, Mendix',
     scope: '고객용·시설용 앱 핵심 화면, 인증·결제 연동, 스토어 배포',
     team: 'BE 2 / FE 2 중 1인',
-    status: 'ARCHIVED',
+    status: 'EXTERNAL',
     company: '디엑스티',
     problem:
       '고객과 시설 운영자가 서로 다른 앱에서 인증·결제·이용권 관리 흐름을 안정적으로 써야 했다.',
@@ -165,7 +165,7 @@ export const projectRecords = [
     stack: 'React, React Native, TypeScript, Fabric.js, AWS',
     scope: '담당 기능 구현 보조, 간단한 리팩터링, PoC 화면 지원',
     team: '스콥 / 인턴',
-    status: 'ARCHIVED',
+    status: 'EXTERNAL',
     company: '스콥',
     problem:
       '인턴으로 배정된 화면·기능 일부를 구현하고 기존 코드를 따라가며 정리할 필요가 있었다.',
