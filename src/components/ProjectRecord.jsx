@@ -31,6 +31,19 @@ export function ProjectRecord({ record }) {
 
       <div className="project-record-body">
         <h3 id={`${record.id}-title`}>{record.name}</h3>
+        {record.keyFeatures?.length ? (
+          <div className="record-block">
+            <p className="meta-key">Key capabilities</p>
+            <ul className="feature-list">
+              {record.keyFeatures.map((feature) => (
+                <li key={feature.title}>
+                  <strong>{feature.title}</strong>
+                  <p>{feature.detail}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
         <div className="record-block">
           <p className="meta-key">Problem</p>
           <p>{record.problem}</p>

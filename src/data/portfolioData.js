@@ -5,16 +5,38 @@ export const projectRecords = [
     name: '글로벌 제조사 Salesforce 기반 주문·재고 관리 시스템 고도화',
     role: 'Salesforce 풀스택 개발',
     stack: 'Salesforce, Apex, LWC, JavaScript, SOQL, SAP REST API, Queueable Apex',
-    scope: '주문·재고·리베이트 관리 기능 고도화 및 SAP 인터페이스 연동',
+    scope: '주문·가격·출하·할당 Hub 및 SAP 비동기 인터페이스 연동',
     team: '에스비티글로벌 / 담당',
     status: 'OPERATIONAL',
     company: '에스비티글로벌',
     problem:
-      '주문 변경·승인·EOL 취소와 잔여 오더 모니터링이 분산되어 있으며, SAP와 Salesforce 간 주문·가격·할인 정보가 동기화되어야 한다.',
+      '주문·가격·출하·할당 업무가 화면과 SAP 사이에 분산되어, 승인된 변경만 운영 시스템으로 안전하게 반영되어야 했다.',
     decision:
-      'Apex Controller/Trigger/Service와 LWC로 업무 프로세스를 구성하고, Queueable Apex로 SAP 비동기 인터페이스와 응답 반영 로직을 분리했다.',
+      'LWC Hub에서 업무를 모으고, Apex Queueable로 SAP 송신·수신·상태 반영을 분리해 Partial Complete와 상호 가드까지 운영 가능하게 설계했다.',
     outcome:
-      '주문 수량·저장위치·배치 변경과 EOL 취소, 잔여 오더 모니터링을 시스템화하고 SAP 응답 결과에 따른 데이터 반영을 운영 가능한 형태로 구현했다.',
+      '승인된 가격·오더·출하·할당 변경이 Salesforce와 SAP 양쪽에 추적 가능한 상태로 반영되도록 핵심 인터페이스를 구축했다.',
+    keyFeatures: [
+      {
+        title: '가격·특가 결재 → SAP 조건 연동',
+        detail:
+          '다단계 결재 승인 후 SD_43/44로 SAP 가격 조건을 생성하고 Pricebook까지 후속 반영. 결재 상태와 SAP 진행 상태를 분리해 Partial Complete를 추적.',
+      },
+      {
+        title: '오더 수량·저장위치·배치 통합 수정',
+        detail:
+          '수량(Q)·저장위치(L)·배치(B) 변경을 SD_35/36 단일 비동기 파이프라인으로 처리. 출하 중 저장위치 이동은 재발주 분기와 상호 가드로 경합을 차단.',
+      },
+      {
+        title: '출하 예약 3채널 원자적 SAP 송신',
+        detail:
+          '채널·잔량·capacity 검증 후 atomic reserve와 Queueable SD_38 송신, SD_39로 출고 반영. UI 접수와 SAP 완료를 분리한 운영형 출하 파이프라인.',
+      },
+      {
+        title: '할당 수량 실시간 조회·제로섬 조정',
+        detail:
+          'SD_48로 SAP 최신 할당을 동기 조회하고, 조정 합계 0 검증 후 SD_53/54로 라인 간 재배분. Pending 라인 중복 조정을 차단.',
+      },
+    ],
   },
   {
     id: 'PRJ-02',

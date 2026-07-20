@@ -319,6 +319,36 @@ p {
   max-width: 70ch;
 }
 
+.feature-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  max-width: 72ch;
+}
+
+.feature-list li {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.feature-list li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.feature-list strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.feature-list p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .range-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
