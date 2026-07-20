@@ -4,18 +4,18 @@ import App from './App.jsx';
 import { contact } from './data/textContent.js';
 
 describe('App', () => {
-  it('mounts the portfolio document with six sections', () => {
+  it('mounts the portfolio document with five sections', () => {
     render(<App />);
 
     expect(screen.getByRole('main')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 1, name: 'KANG JIWON' })).toBeInTheDocument();
     expect(screen.getByText('ENTERPRISE APPLICATION DEVELOPER')).toBeInTheDocument();
-    expect(screen.getByText('PORTFOLIO REV. 2026.07')).toBeInTheDocument();
-    expect(screen.getByText('STATUS: OPERATIONAL')).toBeInTheDocument();
+    const identity = document.getElementById('identification');
+    expect(within(identity).getByText('2026.07')).toBeInTheDocument();
+    expect(within(identity).getByText('OPERATIONAL')).toBeInTheDocument();
 
     for (const label of [
       'Identification',
-      'Selected Systems',
       'Project Records',
       'Technical Range',
       'Engineering Notes',
@@ -24,25 +24,21 @@ describe('App', () => {
       expect(screen.getAllByText(label).length).toBeGreaterThan(0);
     }
 
+    expect(screen.queryByText('Selected Systems')).not.toBeInTheDocument();
     expect(document.getElementById('identification')).toBeTruthy();
-    expect(document.getElementById('selected-systems')).toBeTruthy();
+    expect(document.getElementById('selected-systems')).toBeFalsy();
     expect(document.getElementById('project-records')).toBeTruthy();
     expect(document.getElementById('technical-range')).toBeTruthy();
     expect(document.getElementById('engineering-notes')).toBeTruthy();
     expect(document.getElementById('contact')).toBeTruthy();
   });
 
-  it('renders selected systems with gallery evidence', () => {
+  it('keeps internship record brief', () => {
     render(<App />);
 
-    const systems = document.getElementById('selected-systems');
-    expect(document.getElementById('project-favorfit')).toBeTruthy();
-    expect(document.getElementById('project-keepay')).toBeTruthy();
-    expect(within(systems).getByRole('heading', { name: 'Favorfit' })).toBeInTheDocument();
-    expect(within(systems).getByRole('heading', { name: 'KeepPay' })).toBeInTheDocument();
-    expect(within(systems).getByText(/Fabric\.js를 활용한/)).toBeInTheDocument();
-    expect(within(systems).getByAltText('캔버스 에디터')).toBeInTheDocument();
-    expect(within(systems).getByAltText('고객용 이용권 관리')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: '웹·모바일 프론트엔드 인턴 업무' })).toBeInTheDocument();
+    expect(screen.queryByAltText('캔버스 에디터')).not.toBeInTheDocument();
+    expect(screen.queryByText(/인터랙티브 캔버스 에디터/)).not.toBeInTheDocument();
   });
 
   it('records employment timeline in engineering notes', () => {

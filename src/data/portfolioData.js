@@ -1,128 +1,3 @@
-export const favorfitShots = [
-  {
-    title: '로그인 화면',
-    image: './assets/favorfit/screenshots/01-login.png',
-    caption:
-      'OAuth2.0 기반의 소셜 로그인과 자체 회원가입 기능을 제공하는 화면입니다.',
-  },
-  {
-    title: '제작 메인 화면',
-    image: './assets/favorfit/screenshots/03-mypage-make.png',
-    caption:
-      '사용자가 상세페이지 제작을 시작하는 메인 동선을 보여주는 화면입니다.',
-  },
-  {
-    title: '상품 업로드 단계',
-    image: './assets/favorfit/screenshots/06-ai-product.png',
-    caption: '상품 이미지를 업로드하고 편집 전 상태를 확인하는 단계입니다.',
-  },
-  {
-    title: '추천 결과 화면',
-    image: './assets/favorfit/screenshots/07-ai-result.png',
-    caption:
-      'AI 기반 색상과 배경 추천 결과를 한눈에 비교할 수 있도록 구성된 화면입니다.',
-  },
-  {
-    title: '결과 선택 화면',
-    image: './assets/favorfit/screenshots/08-choice.png',
-    caption:
-      '선택한 결과를 더 큰 화면으로 확인하고 다음 작업으로 이어지는 구간입니다.',
-  },
-  {
-    title: '캔버스 에디터',
-    image: './assets/favorfit/screenshots/05-canvas-editor.png',
-    caption:
-      '실제 편집 기능이 모여 있는 핵심 화면으로, 이미지 배경 제거 및 이미지 편집 기능을 제공합니다.',
-  },
-];
-
-export const keepayShots = [
-  {
-    title: '고객용 이용권 관리',
-    image: './assets/keepay/screenshots/user-03.webp',
-    caption:
-      '구매한 이용권을 확인하고 상태를 관리하는 흐름을 보여주는 화면입니다.',
-  },
-  {
-    title: '고객용 이용권 상세',
-    image: './assets/keepay/screenshots/user-04.webp',
-    caption:
-      '시설 상세와 판매 중인 이용권 정보를 함께 확인하는 구매 전환 구간입니다.',
-  },
-  {
-    title: '시설 정보 관리',
-    image: './assets/keepay/screenshots/facility-03.webp',
-    caption:
-      '시설 정보와 사업자 정보를 수정·관리하는 운영자용 관리 화면입니다.',
-  },
-  {
-    title: '판매·정산 관리',
-    image: './assets/keepay/screenshots/facility-04.webp',
-    caption: '판매된 이용권 내역과 정산 상태를 확인하는 운영 관리 화면입니다.',
-  },
-];
-
-export const favorfitHighlights = [
-  'React 기반 프론트엔드 개발',
-  'Fabric.js를 활용한 인터랙티브 캔버스 에디터 구현',
-  '비효율적인 컴포넌트 구조를 분리해 재사용 가능한 형태로 리팩토링',
-  '다수의 캔버스 렌더링으로 인한 성능 저하를 썸네일 시스템 도입으로 개선',
-  'Undo, Redo, Copy, Paste, Flip, 배경 복구, 그림자 생성, 색상 추천 기능 구현',
-];
-
-export const keepayHighlights = [
-  'React Native 기반 고객용·시설용 크로스플랫폼 앱 구현',
-  'AWS Cognito를 활용한 인증, 회원가입, 계정 찾기 흐름 개발',
-  'PASS 본인인증 연동',
-  '메인페이 연동 결제 플로우 구현',
-  '체육시설 검색, 이용권 구매, 이용권 관리, 재구매 지원 신청 화면 개발',
-  '시설 정보 관리, 이용권 등록, 판매·취소 관리 화면 개발',
-  '안드로이드 폴더블 UI 및 다양한 해상도 대응',
-  'iOS·Android 스토어 배포 및 운영 대응',
-];
-
-export const selectedSystems = [
-  {
-    id: 'SYS-01',
-    anchorId: 'project-favorfit',
-    name: 'Favorfit',
-    period: '2023.09 — 2024.02',
-    role: '프론트엔드 개발',
-    stack: 'React, Axios, Recoil, Fabric.js, AWS',
-    team: 'BE 2 / FE 2 중 FE',
-    status: 'ARCHIVED',
-    summary:
-      'AI 기반 쇼핑몰 상품 상세페이지 제작 서비스. 로그인부터 캔버스 편집까지 이어지는 제작 흐름의 프론트엔드를 담당했다.',
-    highlights: favorfitHighlights,
-    gallery: favorfitShots,
-    galleryClassName: '',
-    copy: [
-      '사용자가 직접 결과물을 만드는 구간에 집중했다. 추천 결과 확인과 Fabric.js 기반 편집기에서 조작 흐름과 렌더링 비용을 함께 다뤘다.',
-      '다중 캔버스 렌더링 부하를 썸네일 체계로 줄인 경험은 이후 복잡한 화면 구조를 설계할 때의 기준으로 남았다.',
-    ],
-  },
-  {
-    id: 'SYS-02',
-    anchorId: 'project-keepay',
-    name: 'KeepPay',
-    period: '2024.03 — 2024.09',
-    role: '모바일 앱 프론트엔드 개발 및 배포',
-    stack: 'React Native, TypeScript, Recoil, AWS Cognito, Mendix',
-    team: 'BE 2 / FE 2 중 FE',
-    status: 'ARCHIVED',
-    summary:
-      '체육시설 선납 이용료를 보호하는 안심결제 서비스. 고객용·시설용 앱의 핵심 흐름과 스토어 배포를 담당했다.',
-    highlights: keepayHighlights,
-    gallery: keepayShots,
-    galleryClassName: 'gallery-grid-portrait',
-    serviceUrl: 'https://www.keepay.org/',
-    copy: [
-      '고객용 앱의 인증·본인인증·시설 검색·이용권 구매/관리와 시설용 앱의 정보·판매 관리 화면을 구현했다.',
-      '공개 앱은 현재 내려가 있어, 당시 스토어 아카이브에 남은 화면을 기준으로 기록한다.',
-    ],
-  },
-];
-
 export const projectRecords = [
   {
     id: 'PRJ-01',
@@ -263,19 +138,19 @@ export const projectRecords = [
   {
     id: 'PRJ-09',
     period: '2023.09 — 2024.02',
-    name: 'AI 커머스·의약품 관리 서비스 프론트엔드 개발',
+    name: '웹·모바일 프론트엔드 인턴 업무',
     role: '프론트엔드 개발 인턴',
-    stack: 'React, React Native, TypeScript, Fabric.js, Recoil, AWS',
-    scope: 'Favorfit 에디터/성능 개선, GetMedi PoC 모바일 화면 지원',
+    stack: 'React, React Native, TypeScript, Fabric.js, AWS',
+    scope: '담당 기능 구현 보조, 간단한 리팩터링, PoC 화면 지원',
     team: '스콥 / 인턴',
     status: 'ARCHIVED',
     company: '스콥',
     problem:
-      '상세페이지 제작 에디터의 조작성과 다중 캔버스 성능, 의약품 재고 PoC 화면이 동시에 필요했다.',
+      '인턴으로 배정된 화면·기능 일부를 구현하고 기존 코드를 따라가며 정리할 필요가 있었다.',
     decision:
-      'Fabric.js 에디터와 썸네일 렌더링으로 성능을 잡고, 컴포넌트 분리로 프론트엔드 구조를 정리했다.',
+      '담당 범위 안에서 React 화면 구현과 작은 단위 리팩터링을 우선했다.',
     outcome:
-      'Favorfit 프론트엔드 기능·리팩터링을 수행하고 GetMedi PoC 모바일 화면 개발을 지원했다.',
+      'Favorfit 일부 기능 지원과 GetMedi PoC 화면 지원 정도를 수행했다.',
   },
 ];
 
@@ -332,6 +207,6 @@ export const experience = [
     company: '스콥',
     period: '2023.09 — 2024.02',
     role: '개발팀 인턴 / 수습',
-    summary: 'React·NestJS·AWS 기반 웹/모바일과 프론트엔드 리팩터링, 배포 환경 관리.',
+    summary: '웹·모바일 프론트엔드 구현과 유지보수 보조.',
   },
 ];

@@ -3,13 +3,11 @@ import { EngineeringNotes } from './components/EngineeringNotes.jsx';
 import { IdentificationBlock } from './components/IdentificationBlock.jsx';
 import { ProjectRecord } from './components/ProjectRecord.jsx';
 import { SectionIndex } from './components/SectionIndex.jsx';
-import { SelectedSystem } from './components/SelectedSystem.jsx';
 import { TechnicalRange } from './components/TechnicalRange.jsx';
 import {
   engineeringNotes,
   experience,
   projectRecords,
-  selectedSystems,
   technicalRange,
 } from './data/portfolioData.js';
 import {
@@ -30,26 +28,6 @@ function App() {
 
       <main className="doc-main">
         <IdentificationBlock content={identification} />
-
-        <section
-          className="doc-section"
-          id="selected-systems"
-          aria-labelledby="selected-systems-title"
-        >
-          <header className="section-header">
-            <p className="section-kicker">
-              <span className="mono">{sectionCopy.selectedSystems.number}</span> /{' '}
-              {sectionCopy.selectedSystems.title}
-            </p>
-            <h2 id="selected-systems-title">{sectionCopy.selectedSystems.title}</h2>
-            <p className="section-lede">{sectionCopy.selectedSystems.body}</p>
-          </header>
-          <div className="selected-systems-list">
-            {selectedSystems.map((system) => (
-              <SelectedSystem key={system.id} system={system} />
-            ))}
-          </div>
-        </section>
 
         <section
           className="doc-section"
