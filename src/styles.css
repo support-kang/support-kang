@@ -256,6 +256,7 @@ p {
 
 .identity-summary {
   margin-top: 22px;
+  max-width: none;
 }
 
 .project-record h3 {
