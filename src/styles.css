@@ -256,7 +256,7 @@ p {
 
 .identity-summary {
   margin-top: 22px;
-  max-width: 68ch;
+  max-width: none;
 }
 
 .project-record h3 {
@@ -473,6 +473,13 @@ p {
     border-right: 0;
     border-bottom: 1px solid var(--line);
     background: var(--bg);
+    transition: transform var(--motion);
+    will-change: transform;
+  }
+
+  .section-index.is-hidden {
+    transform: translateY(-100%);
+    pointer-events: none;
   }
 
   .section-index-list {
