@@ -44,12 +44,4 @@
 
 🔗 [포트폴리오 바로가기](https://support-kang.github.io/support-kang/)
 
-<br/>
 
-
-## 📌 Career Direction
-
-```text
-Enterprise System Developer
-→ Backoffice & Business Process Automation
-→ AI-assisted Enterprise Application Developer
