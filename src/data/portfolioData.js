@@ -84,6 +84,7 @@ export const keepayHighlights = [
 export const selectedSystems = [
   {
     id: 'SYS-01',
+    anchorId: 'project-favorfit',
     name: 'Favorfit',
     period: '2023.09 — 2024.02',
     role: '프론트엔드 개발',
@@ -102,6 +103,7 @@ export const selectedSystems = [
   },
   {
     id: 'SYS-02',
+    anchorId: 'project-keepay',
     name: 'KeepPay',
     period: '2024.03 — 2024.09',
     role: '모바일 앱 프론트엔드 개발 및 배포',

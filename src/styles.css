@@ -21,6 +21,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+.doc-section,
+.selected-system {
+  scroll-margin-top: 72px;
 }
 
 body {
@@ -461,11 +467,30 @@ p {
   border-left: 1px solid var(--line);
 }
 
-.credential-list {
+.credential-list,
+.employment-list {
   list-style: none;
   display: grid;
   gap: 6px;
   color: var(--muted);
+}
+
+.employment-list {
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.employment-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.employment-list p {
+  margin-top: 2px;
 }
 
 .contact-list {

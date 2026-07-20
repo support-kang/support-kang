@@ -12,6 +12,8 @@ describe('styles accessibility contracts', () => {
   it('defines focus-visible outlines and reduced-motion overrides', () => {
     expect(css).toMatch(/:focus-visible/);
     expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);
+    expect(css).toMatch(/scroll-margin-top/);
+    expect(css).toMatch(/scroll-padding-top/);
     expect(css).toMatch(/\.section-index/);
     expect(css).toMatch(/@media \(max-width:\s*1024px\)/);
   });

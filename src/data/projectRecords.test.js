@@ -9,6 +9,7 @@ const REQUIRED_FIELDS = [
   'stack',
   'scope',
   'team',
+  'company',
   'status',
   'problem',
   'decision',

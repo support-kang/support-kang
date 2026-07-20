@@ -36,11 +36,22 @@ describe('App', () => {
     render(<App />);
 
     const systems = document.getElementById('selected-systems');
+    expect(document.getElementById('project-favorfit')).toBeTruthy();
+    expect(document.getElementById('project-keepay')).toBeTruthy();
     expect(within(systems).getByRole('heading', { name: 'Favorfit' })).toBeInTheDocument();
     expect(within(systems).getByRole('heading', { name: 'KeepPay' })).toBeInTheDocument();
     expect(within(systems).getByText(/Fabric\.js를 활용한/)).toBeInTheDocument();
     expect(within(systems).getByAltText('캔버스 에디터')).toBeInTheDocument();
     expect(within(systems).getByAltText('고객용 이용권 관리')).toBeInTheDocument();
+  });
+
+  it('records employment timeline in engineering notes', () => {
+    render(<App />);
+    const notes = document.getElementById('engineering-notes');
+
+    expect(within(notes).getByText('에스비티글로벌')).toBeInTheDocument();
+    expect(within(notes).getByText('디엑스티')).toBeInTheDocument();
+    expect(within(notes).getByText('스콥')).toBeInTheDocument();
   });
 
   it('renders project records as work-spec rows', () => {

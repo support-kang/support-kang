@@ -2,7 +2,7 @@ import { BulletList } from './BulletList.jsx';
 
 export function SelectedSystem({ system }) {
   return (
-    <article className="selected-system" id={system.id.toLowerCase()}>
+    <article className="selected-system" id={system.anchorId || system.id.toLowerCase()}>
       <header className="selected-system-head">
         <div className="selected-system-meta">
           <p className="mono system-id">{system.id}</p>

@@ -7,6 +7,7 @@ import { SelectedSystem } from './components/SelectedSystem.jsx';
 import { TechnicalRange } from './components/TechnicalRange.jsx';
 import {
   engineeringNotes,
+  experience,
   projectRecords,
   selectedSystems,
   technicalRange,
@@ -71,7 +72,11 @@ function App() {
         </section>
 
         <TechnicalRange groups={technicalRange} copy={sectionCopy.technicalRange} />
-        <EngineeringNotes notes={engineeringNotes} copy={sectionCopy.engineeringNotes} />
+        <EngineeringNotes
+          notes={engineeringNotes}
+          experience={experience}
+          copy={sectionCopy.engineeringNotes}
+        />
         <ContactBlock content={contact} copy={sectionCopy.contact} />
       </main>
     </div>
