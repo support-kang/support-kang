@@ -12,7 +12,8 @@
   --radius: 2px;
   --motion: 140ms ease;
   --index-width: 220px;
-  --content-max: 1080px;
+  --content-max: 960px;
+  --page-max: 1240px;
 }
 
 * {
@@ -88,6 +89,8 @@ p {
 .doc-shell {
   display: grid;
   grid-template-columns: var(--index-width) minmax(0, 1fr);
+  width: min(100% - 48px, var(--page-max));
+  margin-inline: auto;
   min-height: 100vh;
 }
 
@@ -134,8 +137,10 @@ p {
 }
 
 .doc-main {
-  width: min(100%, calc(var(--content-max) + 80px));
-  padding: 40px 40px 96px;
+  width: min(100%, var(--content-max));
+  justify-self: center;
+  margin-inline: auto;
+  padding: 48px clamp(32px, 4vw, 56px) 96px;
 }
 
 .doc-section + .doc-section {
