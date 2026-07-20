@@ -36,7 +36,7 @@ export const sectionCopy = {
   technicalRange: {
     number: '03',
     title: 'Technical Range',
-    body: '실무에서 사용한 기술 범위. 숙련도 수치화는 하지 않는다.',
+    body: '프로젝트 사용 기술 스택 모음',
   },
   engineeringNotes: {
     number: '04',
