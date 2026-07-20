@@ -176,8 +176,7 @@ p {
 .identity-summary,
 .body-copy p,
 .system-summary,
-.record-block p,
-.notes-aside p {
+.record-block p {
   color: var(--muted);
 }
 
@@ -409,12 +408,17 @@ p {
   border-left: 1px solid var(--line);
 }
 
+.notes-aside > p:not(.meta-key),
+.credential-list,
+.employment-list {
+  color: var(--muted);
+}
+
 .credential-list,
 .employment-list {
   list-style: none;
   display: grid;
   gap: 6px;
-  color: var(--muted);
 }
 
 .employment-list {
@@ -429,6 +433,10 @@ p {
   gap: 8px 16px;
   margin-bottom: 4px;
   color: var(--text);
+}
+
+.employment-head .mono {
+  color: var(--muted);
 }
 
 .employment-list p {
