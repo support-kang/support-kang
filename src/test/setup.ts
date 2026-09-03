@@ -8,7 +8,7 @@ afterEach(() => {
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: (query) => ({
+  value: (query: string) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -23,7 +23,9 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 class MockIntersectionObserver {
-  constructor(callback) {
+  callback: IntersectionObserverCallback;
+
+  constructor(callback: IntersectionObserverCallback) {
     this.callback = callback;
   }
 

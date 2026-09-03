@@ -1,6 +1,86 @@
-export const projectRecords = [
+export interface ProjectFeature {
+  title: string;
+  detail: string;
+}
+
+export interface ProjectRecord {
+  id: string;
+  featured: boolean;
+  featuredOrder: number | null;
+  displayTitle: string;
+  displayClient: string;
+  domain: string;
+  shortSummary: string;
+  decisionSummary?: string;
+  resultSummary?: string;
+  capabilities: string[];
+  architecture: string[];
+  period: string;
+  name: string;
+  role: string;
+  stack: string;
+  scope: string;
+  team: string;
+  status: 'INTERNAL' | 'EXTERNAL';
+  company: string;
+  problem: string;
+  decision: string;
+  outcome: string;
+  keyFeatures?: ProjectFeature[];
+}
+
+export interface TechnicalFocusGroup {
+  label: string;
+  items: string[];
+}
+
+export interface TechnicalFocusData {
+  core: TechnicalFocusGroup[];
+  working: string[];
+}
+
+export interface EngineeringPrinciple {
+  title: string;
+  description: string;
+}
+
+export interface ExperienceItem {
+  company: string;
+  period: string;
+  role: string;
+  publicRole: string;
+  technologies: string[];
+  responsibilities: string[];
+  summary: string;
+  subdued?: boolean;
+}
+
+export const projectRecords: ProjectRecord[] = [
   {
     id: 'PRJ-01',
+    featured: true,
+    featuredOrder: 1,
+    displayTitle: '글로벌 제조사 주문·재고 관리 시스템 고도화',
+    displayClient: '글로벌 제조사',
+    domain: 'Order / Inventory · Salesforce / SAP',
+    shortSummary:
+      '주문·가격·출하·할당 업무를 Salesforce에서 통합하고 SAP와 연결한 엔터프라이즈 업무 시스템.',
+    decisionSummary: 'SAP 연동을 비동기 처리로 분리하고 요청·전송·결과 상태를 독립적으로 추적.',
+    resultSummary: '승인된 변경을 두 시스템에 일관되게 반영하고 실패 구간을 확인할 수 있는 흐름을 구현.',
+    capabilities: [
+      '가격·특가 승인 및 SAP 가격 조건 연동',
+      '주문 수량·저장 위치·배치 정보 통합 변경',
+      '출하 예약 검증 및 SAP 연동',
+      '실시간 할당 조회와 재배분',
+    ],
+    architecture: [
+      'User',
+      'Salesforce UI',
+      'Approval',
+      'Async Processing',
+      'SAP',
+      'Result Tracking',
+    ],
     period: '2026.04 — PRESENT',
     name: '글로벌 제조사 Salesforce 기반 주문·재고 관리 시스템 고도화',
     role: 'Salesforce 풀스택 개발',
@@ -40,6 +120,14 @@ export const projectRecords = [
   },
   {
     id: 'PRJ-02',
+    featured: false,
+    featuredOrder: null,
+    displayTitle: '개발·스테이징 환경 CI/CD 파이프라인 구축',
+    displayClient: '사내 개발 환경',
+    domain: 'Delivery Infrastructure',
+    shortSummary: '반복 가능한 개발·스테이징 빌드와 배포 환경을 구축하고 수동 운영 흐름을 자동화.',
+    capabilities: ['GitLab·Jenkins 빌드 자동화', 'Docker·k3s 기반 실행 환경', '재현 가능한 배포 구성'],
+    architecture: [],
     period: '2026.02 — 2026.03',
     name: '사내 개발·스테이징 환경 CI/CD 파이프라인 구축',
     role: '인프라 설계 및 구축',
@@ -57,8 +145,19 @@ export const projectRecords = [
   },
   {
     id: 'PRJ-03',
+    featured: true,
+    featuredOrder: 3,
+    displayTitle: '차세대 PLM PoC 기획 및 개발',
+    displayClient: '전자 제조사',
+    domain: 'PLM · Enterprise PoC',
+    shortSummary:
+      '짧은 일정 안에 데이터 모델, 핵심 화면, ALM·PLM 연동과 AI 지원 흐름을 검증한 엔터프라이즈 PoC.',
+    decisionSummary: '데이터 모델과 핵심 화면을 먼저 고정해 제한된 기간의 검증 범위를 명확히 설정.',
+    resultSummary: 'ALM·PLM 연동과 AI 지원 흐름을 포함한 핵심 기능을 1개월 PoC로 구현.',
+    capabilities: ['MVP 범위와 데이터 모델 설계', 'Siemens ALM·PLM 연동', 'AI 챗봇 기반 요구사항 처리', '1개월 내 핵심 기능 검증'],
+    architecture: [],
     period: '2025.12 — 2026.01',
-    name: '삼성전자 N-PLM PoC 기획 및 개발',
+    name: '전자 제조사 N-PLM PoC 기획 및 개발',
     role: 'PoC 기획 및 풀스택 개발',
     stack: 'Low-Code Platform, React, Amazon Bedrock, Siemens ALM·PLM',
     scope: 'MVP 기획, 데이터 모델 설계, ALM/PLM 연동, AI 챗봇 연동',
@@ -74,8 +173,19 @@ export const projectRecords = [
   },
   {
     id: 'PRJ-04',
+    featured: true,
+    featuredOrder: 4,
+    displayTitle: 'SCM·Scope 3 탄소배출량 검증 시스템 PoC',
+    displayClient: '화학 제조사',
+    domain: 'SCM · Sustainability',
+    shortSummary:
+      '대용량 공급망 데이터를 조회하고 Scope 3 탄소배출량 검증 로직을 확인할 수 있는 업무 시스템 PoC.',
+    decisionSummary: '외부 DB와 Batch에 검증 로직을 두고 React 위젯으로 대용량 조회 화면을 구성.',
+    resultSummary: 'PoC 범위 수립부터 검증 화면 구현과 사용자 교육까지 일관되게 수행.',
+    capabilities: ['SCM·Scope 3 검증 로직', '외부 DB·Batch 처리', 'SpreadJS 기반 대용량 조회 위젯', 'PoC 수행과 사용자 교육'],
+    architecture: [],
     period: '2025.08 — 2025.11',
-    name: 'LG화학 SCM·Scope 3 탄소배출량 검증 시스템 PoC',
+    name: '화학 제조사 SCM·Scope 3 탄소배출량 검증 시스템 PoC',
     role: 'PoC 기획·개발 및 Low-Code 교육',
     stack: 'Low-Code Platform, React, SpreadJS, External Database, Batch',
     scope: 'PoC 범위 수립, 검증 로직, 대용량 조회 화면, 위젯, 고객 교육',
@@ -91,8 +201,19 @@ export const projectRecords = [
   },
   {
     id: 'PRJ-05',
+    featured: true,
+    featuredOrder: 2,
+    displayTitle: '열해석 자동화 SPDM 시스템 개발',
+    displayClient: '자동차 제조사',
+    domain: 'Manufacturing · SPDM',
+    shortSummary:
+      '열해석 데이터의 변환·조회·시각화와 파일 전송 흐름을 연결해 분석 작업을 자동화한 제조 시스템.',
+    decisionSummary: 'ECharts·AG Grid 위젯으로 분석 UI를 구성하고 SFTP·SMTP 연계를 분리.',
+    resultSummary: '열해석 결과의 변환·표시와 파일·메일 전달을 하나의 업무 흐름으로 구현.',
+    capabilities: ['열해석 데이터 자동화', 'ECharts 2D·3D 시각화', 'AG Grid 기반 대용량 조회', 'SFTP·SMTP 외부 연계'],
+    architecture: [],
     period: '2025.05 — 2025.08',
-    name: '현대자동차 열해석 자동화 SPDM 시스템 개발',
+    name: '자동차 제조사 열해석 자동화 SPDM 시스템 개발',
     role: '풀스택 개발',
     stack: 'Java, React, TypeScript, ECharts, AG Grid, SFTP, SMTP',
     scope: '해석 데이터 자동화, 시각화, 파일 전송, 시스템 메일, Low-Code 위젯 통합',
@@ -108,8 +229,16 @@ export const projectRecords = [
   },
   {
     id: 'PRJ-06',
+    featured: false,
+    featuredOrder: null,
+    displayTitle: '제품개발 통합 관리 PoC',
+    displayClient: '전자 제조사',
+    domain: 'Product Development · PoC',
+    shortSummary: '제품개발 현황을 한곳에서 관리하기 위한 데이터 모델과 React 일정 시각화 컴포넌트를 구현.',
+    capabilities: ['통합 관리 데이터 모델', 'React Gantt Chart', 'SaaS형 PoC 설계'],
+    architecture: [],
     period: '2025.06',
-    name: 'LG전자 HS 제품개발통합 PoC 기획 및 개발',
+    name: '전자 제조사 HS 제품개발통합 PoC 기획 및 개발',
     role: 'PoC 기획 및 개발',
     stack: 'Low-Code Platform, React',
     scope: '통합 관리 앱 기획, 데이터 모델 설계, Gantt Chart 컴포넌트',
@@ -125,6 +254,14 @@ export const projectRecords = [
   },
   {
     id: 'PRJ-07',
+    featured: false,
+    featuredOrder: null,
+    displayTitle: '엔터프라이즈 PLM·HSE 시스템 및 React Widget 개발',
+    displayClient: '엔터프라이즈 솔루션',
+    domain: 'PLM · HSE',
+    shortSummary: 'PLM·HSE 업무에 필요한 재사용 UI와 조회 기능을 React 위젯과 Mendix로 확장.',
+    capabilities: ['React·TypeScript 플러거블 위젯', '교육 이수 조회·알림', 'Mendix·Java 확장'],
+    architecture: [],
     period: '2024.02 — 2025.05',
     name: '엔터프라이즈 PLM·HSE 시스템 및 React Widget 개발',
     role: '프론트엔드 및 Mendix 풀스택 개발',
@@ -142,8 +279,16 @@ export const projectRecords = [
   },
   {
     id: 'PRJ-08',
+    featured: false,
+    featuredOrder: null,
+    displayTitle: '체육시설 안심결제 모바일 앱 개발',
+    displayClient: '결제 서비스',
+    domain: 'Mobile · Payment',
+    shortSummary: '고객과 시설 운영자의 인증·결제·이용권 흐름을 하나의 크로스플랫폼 앱 경험으로 구현.',
+    capabilities: ['고객용·시설용 핵심 화면', '인증·결제 연동', 'iOS·Android 배포'],
+    architecture: [],
     period: '2024.03 — 2024.09',
-    name: '체육시설 안심결제 서비스 KeepPay 모바일 앱 개발',
+    name: '체육시설 안심결제 모바일 앱 개발',
     role: '모바일 앱 프론트엔드 개발 및 배포',
     stack: 'React Native, TypeScript, Recoil, AWS Cognito, Mendix',
     scope: '고객용·시설용 앱 핵심 화면, 인증·결제 연동, 스토어 배포',
@@ -159,6 +304,14 @@ export const projectRecords = [
   },
   {
     id: 'PRJ-09',
+    featured: false,
+    featuredOrder: null,
+    displayTitle: '웹·모바일 프론트엔드 인턴 업무',
+    displayClient: '디지털 제품 개발팀',
+    domain: 'Frontend Internship',
+    shortSummary: 'React·React Native 기반 웹·모바일 화면 구현과 PoC 개발을 지원.',
+    capabilities: ['웹·모바일 화면 구현', '작은 단위 리팩터링', 'PoC 개발 지원'],
+    architecture: [],
     period: '2023.09 — 2024.02',
     name: '웹·모바일 프론트엔드 인턴 업무',
     role: '프론트엔드 개발 인턴',
@@ -172,11 +325,11 @@ export const projectRecords = [
     decision:
       '담당 범위 안에서 React 화면 구현과 작은 단위 리팩터링을 우선.',
     outcome:
-      'Favorfit 일부 기능 지원과 GetMedi PoC 화면 지원.',
+      '웹 서비스 일부 기능과 의료 재고 관리 PoC 화면 구현 지원.',
   },
 ];
 
-export const technicalRange = [
+export const technicalRange: Array<{ group: string; items: string[] }> = [
   {
     group: 'Frontend',
     items: ['React', 'TypeScript', 'JavaScript', 'Next.js', 'React Native', 'Recoil', 'Fabric.js'],
@@ -195,6 +348,42 @@ export const technicalRange = [
   },
 ];
 
+const FEATURED_IDS = ['PRJ-01', 'PRJ-05', 'PRJ-03', 'PRJ-04'];
+const OTHER_WORK_IDS = ['PRJ-02', 'PRJ-06', 'PRJ-08', 'PRJ-07'];
+
+const recordsById = new Map(projectRecords.map((record) => [record.id, record]));
+
+function getProject(id: string): ProjectRecord {
+  const project = recordsById.get(id);
+
+  if (!project) {
+    throw new Error(`Unknown project record: ${id}`);
+  }
+
+  return project;
+}
+
+export const featuredProjects = FEATURED_IDS.map(getProject);
+export const otherProjects = OTHER_WORK_IDS.map(getProject);
+
+export const technicalFocus: TechnicalFocusData = {
+  core: [
+    {
+      label: 'Salesforce',
+      items: ['Apex', 'LWC', 'SOQL', 'Queueable', 'REST Integration'],
+    },
+    {
+      label: 'Frontend',
+      items: ['React', 'TypeScript', 'JavaScript'],
+    },
+    {
+      label: 'Enterprise',
+      items: ['Mendix', 'Java', 'SAP Integration'],
+    },
+  ],
+  working: ['PostgreSQL', 'MySQL', 'Docker', 'Jenkins', 'k3s', 'AWS', 'Git', 'GitLab'],
+};
+
 export const engineeringNotes = {
   paragraphs: [
     '화면 구현에 그치지 않고 상태 관리, 데이터 구조, API·인터페이스 연동, 배포 환경까지 함께 설계하는 쪽을 선호한다.',
@@ -211,11 +400,38 @@ export const engineeringNotes = {
   ],
 };
 
-export const experience = [
+export const engineeringPrinciples: EngineeringPrinciple[] = [
+  {
+    title: 'System over Screen',
+    description: '화면 하나보다 데이터 흐름과 시스템 경계를 함께 설계합니다.',
+  },
+  {
+    title: 'Observable Workflow',
+    description: '외부 시스템 연동에서는 상태 추적과 실패 구간의 식별·복구 구조를 중요하게 봅니다.',
+  },
+  {
+    title: 'Practical Delivery',
+    description: '제한된 일정에서는 검증 가능하고 운영할 수 있는 결과물을 우선합니다.',
+  },
+  {
+    title: 'Extend When Needed',
+    description: 'Low-Code를 사용하더라도 필요한 영역은 React, Java, Apex로 확장합니다.',
+  },
+];
+
+export const experience: ExperienceItem[] = [
   {
     company: '에스비티글로벌',
     period: '2025.05 — PRESENT',
     role: 'DX부문 ES담당 / Digital Solution팀',
+    publicRole: 'Enterprise Application Developer',
+    technologies: ['Salesforce', 'Apex', 'LWC', 'Mendix', 'React', 'Java', 'SAP Integration'],
+    responsibilities: [
+      'Salesforce 기반 주문·재고 시스템 개발',
+      'SAP REST Integration과 비동기 업무 흐름 구현',
+      '제조업 Enterprise Application 및 PoC 개발',
+      'React 기반 custom widget과 배포 환경 구축',
+    ],
     summary:
       'Mendix·React 기반 기업용 PoC와 Salesforce·SAP 연동 업무 시스템, 사내 CI/CD를 담당.',
   },
@@ -223,12 +439,23 @@ export const experience = [
     company: '디엑스티',
     period: '2024.02 — 2025.05',
     role: 'Cloud Development',
-    summary: 'React 위젯, Mendix 풀스택, React Native 앱 개발 및 유지보수.',
+    publicRole: 'Frontend / Mendix Developer',
+    technologies: ['React Native', 'React', 'TypeScript', 'Recoil', 'Java', 'Mendix'],
+    responsibilities: [
+      'React Native 크로스플랫폼 앱 화면, 인증·결제 연동, iOS·Android 스토어 배포',
+      'React·TypeScript 플러거블 위젯 구현',
+      'PLM·HSE 업무 시스템 기능 개발',
+    ],
+    summary: 'React Native 모바일 앱과 React 위젯, Mendix 기반 업무 시스템을 함께 담당.',
   },
   {
     company: '스콥',
     period: '2023.09 — 2024.02',
     role: '개발팀 인턴 / 수습',
-    summary: '웹·모바일 프론트엔드 구현과 유지보수 보조.',
+    publicRole: 'Frontend Developer Intern',
+    technologies: ['React', 'React Native', 'TypeScript'],
+    responsibilities: ['React·React Native 웹·모바일 화면 구현', '기존 코드 정리와 PoC 개발 지원'],
+    subdued: true,
+    summary: 'React·React Native 기반 웹·모바일 프론트엔드 구현과 유지보수 보조.',
   },
 ];
