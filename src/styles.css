@@ -15,7 +15,6 @@
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
   --header-height: 60px;
   --page-max: 1280px;
-  --reading-max: 72ch;
   --motion: 160ms ease;
 }
 
@@ -26,6 +25,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 24px);
+  caret-color: transparent;
 }
 
 body {
@@ -47,7 +47,6 @@ a {
 button,
 summary,
 a {
-  caret-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -364,7 +363,7 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  max-width: 780px;
+  max-width: 1100px;
   margin-bottom: 72px;
 }
 
@@ -377,11 +376,12 @@ ol {
   font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 1.1;
+  word-break: keep-all;
 }
 
 .section-heading > p:last-child {
-  max-width: var(--reading-max);
   color: var(--text-secondary);
+  word-break: keep-all;
 }
 
 .featured-projects {
@@ -412,12 +412,12 @@ ol {
 }
 
 .project-heading h3 {
-  max-width: 16em;
   margin-top: 12px;
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 1.15;
+  word-break: keep-all;
 }
 
 .project-summary {
@@ -977,7 +977,7 @@ ol {
   }
 
   .section-heading > p:last-child {
-    max-width: 56ch;
+    max-width: none;
   }
 
   .section-heading h2 {
