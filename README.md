@@ -10,7 +10,6 @@
 - 🎓 국민대학교 컴퓨터공학 부전공
 - 💼 엔터프라이즈 시스템 통합 및 백오피스 개발 담당
 - 🧩 Mendix Advanced Developer
-- 🌱 Spring Boot, Java 학습 및 실무 역량 확장 중
 
 <br/>
 
