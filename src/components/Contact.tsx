@@ -14,7 +14,6 @@ export function Contact({ content, copy }: ContactProps) {
       <ul className="contact-links">
         <li><span>Email</span><a href={content.mailto}>{content.email}</a></li>
         <li><span>GitHub</span><ExternalLink href={content.github}>{content.githubLabel}</ExternalLink></li>
-        <li><span>Resume</span><ExternalLink href={content.resumeHref}>{content.resumeLabel}</ExternalLink></li>
       </ul>
     </section>
   );

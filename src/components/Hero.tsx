@@ -52,8 +52,7 @@ export function Hero({ content, contact }: HeroProps) {
           {content.stack.map((item) => <li key={item}>{item}</li>)}
         </ul>
         <div className="hero-actions">
-          <ExternalLink className="button button-primary" href={contact.resumeHref}>Resume</ExternalLink>
-          <ExternalLink className="button button-secondary" href={contact.github}>GitHub</ExternalLink>
+          <ExternalLink className="button button-primary" href={contact.github}>GitHub</ExternalLink>
         </div>
       </div>
       <SystemFlow items={content.systemFlow} />

@@ -36,7 +36,7 @@ describe('App', () => {
     const githubLinks = screen.getAllByRole('link', { name: /GitHub/i });
     expect(githubLinks[0]).toHaveAttribute('href', contact.github);
     expect(githubLinks[0]).toHaveAttribute('rel', 'noreferrer');
-    expect(screen.getAllByRole('link', { name: /Resume/i })[0]).toHaveAttribute('href', contact.resumeHref);
+    expect(screen.queryByRole('link', { name: /Resume/i })).not.toBeInTheDocument();
   });
 
   it('renders four featured projects in the required order', () => {
@@ -98,13 +98,13 @@ describe('App', () => {
     expect(container.querySelector('progress')).toBeNull();
   });
 
-  it('exposes email, GitHub and resume in Contact', () => {
+  it('exposes email and GitHub in Contact', () => {
     render(<App />);
     const section = document.getElementById('contact')!;
 
     expect(within(section).getByRole('link', { name: contact.email })).toHaveAttribute('href', contact.mailto);
     expect(within(section).getByRole('link', { name: contact.githubLabel })).toHaveAttribute('href', contact.github);
-    expect(within(section).getByRole('link', { name: contact.resumeLabel })).toHaveAttribute('href', contact.resumeHref);
+    expect(within(section).getAllByRole('link')).toHaveLength(2);
     expect(within(section).queryByText(contact.portfolio)).not.toBeInTheDocument();
   });
 });
