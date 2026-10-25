@@ -155,17 +155,6 @@ ol {
   gap: 18px;
 }
 
-.header-resume {
-  padding: 5px 11px;
-  border: 1px solid var(--border);
-  border-radius: 7px;
-}
-
-.header-resume:hover {
-  border-color: var(--text-muted);
-  background: var(--surface);
-}
-
 .hero,
 .page-section {
   scroll-margin-top: calc(var(--header-height) + 20px);
@@ -1059,13 +1048,9 @@ ol {
 }
 
 @media (max-width: 440px) {
-  .header-resume {
-    padding: 4px 8px;
-  }
-
   .hero-actions {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .button {

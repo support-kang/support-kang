@@ -9,8 +9,6 @@ export interface ContactContent {
   github: string;
   githubLabel: string;
   portfolio: string;
-  resumeHref: string;
-  resumeLabel: string;
 }
 
 export interface CareerStage {
@@ -59,8 +57,6 @@ export const contact: ContactContent = {
   github: 'https://github.com/support-kang',
   githubLabel: 'github.com/support-kang',
   portfolio: 'https://support-kang.github.io/support-kang/',
-  resumeHref: './assets/resume/resume-jiwon-kang.pdf',
-  resumeLabel: 'Resume PDF',
 };
 
 export const sectionCopy: Record<string, SectionCopyBlock> = {
@@ -91,7 +87,7 @@ export const sectionCopy: Record<string, SectionCopyBlock> = {
   },
   contact: {
     eyebrow: 'Contact',
-    title: '연락처와 이력서',
+    title: '연락처',
     body: '업무 경험에 관한 대화는 아래 채널로 연락해 주세요.',
   },
 };

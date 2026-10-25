@@ -22,7 +22,6 @@ export function Header({ navigation, contact }: HeaderProps) {
         </nav>
         <div className="header-actions">
           <ExternalLink href={contact.github}>GitHub</ExternalLink>
-          <ExternalLink className="header-resume" href={contact.resumeHref}>Resume</ExternalLink>
         </div>
       </div>
     </header>
